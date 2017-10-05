@@ -20,11 +20,11 @@ typedef CPU_context_s * CPU_context_p;
 
 typedef enum state_type {
 	new, ready, running, interrupted, waiting, halted
-} State;
+} state;
 
 typedef struct pcb {
 	unsigned int pid;    // process identification  
-	State state;	    
+	enum state_type state;
 	unsigned int parent; // parent process pid     
 	unsigned char priority; // 0 is highest – 15 is lowest.     
 	unsigned char * mem; // start of process in memory     
@@ -37,4 +37,9 @@ typedef struct pcb {
 typedef PCB_s * PCB_p;
 
 // Functions
-char pcb_toString();
+PCB_p construct();
+void deconstruct(PCB_p pcb);
+char toString();		// set to null parameters for testing purposes in c file. Add pointer later.
+void setPID(PCB_p pcb);
+
+#endif
