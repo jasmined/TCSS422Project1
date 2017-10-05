@@ -5,9 +5,11 @@
 unsigned int pid = 0;
 
 
-int main(void) {
-	toString();
-}
+// int main(void) {
+	// PCB_p pcb = construct();
+	// setPID(pcb);
+	// toString(pcb);
+// }
 
 char* getStateString(enum state_type state) {
 	switch(state) {
@@ -35,11 +37,13 @@ PCB_p construct() {
 	pcb->pid = pid;
 	pcb->priority = 1;
 	pcb->state = new;
+	pcb->context->pc = 0;
 	return pcb;
 }
 
 void deconstruct(PCB_p pcb) {
 	free(pcb);
+	printf("Object deconstructed");
 }
 
 void setPID(PCB_p pcb) {
@@ -47,7 +51,7 @@ void setPID(PCB_p pcb) {
 }
 
 char toString(PCB_p pcb) {
-	printf("PID: %05d , Priority: %u , State: %s", pcb->pid, pcb->priority, getStateString(pcb->state));
+	printf("PID: %02d, Priority: %u, State: %s, PC: %02d\n", pcb->pid, pcb->priority, getStateString(pcb->state), pcb->context->pc);
 }
 	
 	
