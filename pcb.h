@@ -39,7 +39,7 @@ typedef PCB_s * PCB_p;
 // Functions
 PCB_p construct();
 void deconstruct(PCB_p pcb);
-char toString();		// set to null parameters for testing purposes in c file. Add pointer later.
+char toString(PCB_p pcb);
 void setPID(PCB_p pcb);
 
 #endif
