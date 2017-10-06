@@ -5,12 +5,12 @@
 unsigned int pid = 0;
 
 
-int main(void) {
-	PCB_p pcb = construct();
-	setPID(pcb);
-	toString(pcb);
-	toString_context(pcb);
-}
+// int main(void) {
+	// PCB_p pcb = construct();
+	// setPID(pcb);
+	// toString(pcb);
+	// toString_context(pcb);
+// }
 
 char* getStateString(enum state_type state) {
 	switch(state) {
@@ -29,16 +29,18 @@ char* getStateString(enum state_type state) {
 		default:
 			return "null";
 	}
-		
 }
 	
 
 PCB_p construct() {
 	PCB_p pcb = (PCB_p) malloc(sizeof(pcb));
-	pcb->pid = pid;
-	pcb->priority = 1;
-	pcb->state = new;
-	pcb->context->pc = 0;
+	if (pcb == NULL) {
+		printf("pcb allocated");
+	}
+	// pcb->pid = pid;
+	// pcb->priority = 1;
+	// pcb->state = new;
+	// pcb->context->pc = 0;
 	return pcb;
 }
 
@@ -51,10 +53,12 @@ void setPID(PCB_p pcb) {
 	pcb->pid = pid + 1;
 }
 
-char toString(PCB_p pcb) {	
-	printf("PCB #%d----------------------------------------------------------------------\n"
-	"PID: %d, Priority: %u, State: %s, PC: %02d\n", 
-	pcb->pid, pcb->pid, pcb->priority, getStateString(pcb->state), pcb->context->pc);
+char toString(PCB_p pcb) {
+	// printf("%d\n", pcb->pid);
+	printf("PID: %02d, Priority: %02u, State: %s\n", pcb->pid, pcb->priority, getStateString(pcb->state));
+	// printf("PCB #%d----------------------------------------------------------------------\n"
+	// "PID: %d, Priority: %u, State: %s, PC: %02d\n", 
+	// pcb->pid, pcb->pid, pcb->priority, getStateString(pcb->state), pcb->context->pc);
 }
 
 char toString_context(PCB_p pcb) {
