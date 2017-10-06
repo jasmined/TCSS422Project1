@@ -5,12 +5,16 @@
 
 int main(void) {
 	
-	// for (int i = 0; i < 5; i++) {
-		PCB_p pcb = construct();
-		pcb->priority = rand();
-		pcb->pid = 12;
-		toString(pcb);
-		deconstruct(pcb);
-	// }
-
+	PCB_p pcb = construct();
+	pcb->priority = rand() % 16;
+	setPID(pcb);
+	toString_pcb(pcb);
+	deconstruct(pcb);
+	
+	printf("------------------------\n");
+	for (int n = 0; n < 15; n++) {
+		
+	}
+	printf("------------------------\n");
+	
 }
