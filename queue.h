@@ -17,3 +17,5 @@ typedef struct queue {
 
 int isEmpty();
 
+#endif
+
