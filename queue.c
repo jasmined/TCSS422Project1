@@ -44,13 +44,14 @@ void q_enqueue(queue_p q, node_p node)//adds node to back of queue
 
 }
 
-node_p q_dequeue(queue_p q)//removes and returns front node of queue if there is a node 
+PCB_p q_dequeue(queue_p q)//removes and returns front node of queue if there is a node 
 { 
 
   if (q_is_empty(q)) {
     return NULL;
   } else {
   node_p front_temp= *q->head;
+  PCB_p retval = front_temp->pcb;
   /*if (front_temp == NULL) {
     return NULL;
   }
@@ -62,7 +63,7 @@ node_p q_dequeue(queue_p q)//removes and returns front node of queue if there is
       }
   }*/
     q->size--;
-    return front_temp;
+    return retval;
  
   }
 }

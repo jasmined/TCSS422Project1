@@ -1,4 +1,3 @@
-#include <stdio.h>
 #ifndef PCB_H
 #define PCB_H
 
@@ -23,9 +22,9 @@ typedef enum state_type {
 	new, ready, running, interrupted, waiting, halted
 } State;
 
-typedef struct pcb {
+typedef struct pcb { 
 	unsigned int pid;    // process identification  
-	State state;
+	State state;	    
 	unsigned int parent; // parent process pid     
 	unsigned char priority; // 0 is highest – 15 is lowest.     
 	unsigned char * mem; // start of process in memory     
@@ -38,10 +37,4 @@ typedef struct pcb {
 typedef PCB_s * PCB_p;
 
 // Functions
-PCB_p construct();
-void deconstruct(PCB_p pcb);
-char toString(FILE *f, PCB_p pcb);
-char toString_context(FILE *f, PCB_p pcb);
-void setPID(PCB_p pcb);
-
-#endif
+char pcb_toString();

@@ -27,6 +27,7 @@ char* getStateString(enum state_type state) {
 
 PCB_p construct() {
 	PCB_p pcb = (PCB_p) malloc(sizeof(pcb));
+
 	return pcb;
 }
 
