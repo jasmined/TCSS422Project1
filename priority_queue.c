@@ -28,7 +28,7 @@ void p_enqueue(p_queue_p pqueue, PCB_p pcb) {
 	
 }
 
-PCB_p p_dequeue(p_queue_p pqueue) {
+node_p p_dequeue(p_queue_p pqueue) {
 	int j = 16;//int for smallest queue that is not empty;
         node_p deq_node;//node to remove from a queue
         PCB_p deq_pcb;//pcb to receive from queue
