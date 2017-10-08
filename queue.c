@@ -1,65 +1,77 @@
+#include <stdlib.h>
 #include "queue.h"
+#include "pcb.h"
 
-#define defaultsize 63
-queue init()
+queue_p init()
 {
-  queue q = (queue) malloc(sizeof (struct));   
-  q->first = NULL;
+  //struct queue_p *retVal = malloc (sizeof (struct 
+  //PCB_p pcb = (PCB_p) malloc(sizeof(pcb));
+  queue_p q = (queue_p) malloc(sizeof (q));   
+  q->head = NULL;
   q->last = NULL;
 }
-int q_is_empty(queue queue_p)
+int q_is_empty(queue_p q)
 {
-  if (queue_p->size <= 0) return 1;
+  if (q->size <= 0) return 1;
   else return 0;
 }
-
-void q_enqueue(queue queue_p, node node_p)
+//fix this pls
+void q_enqueue(queue_p q, node_p node)
 {
-  if (queue_p->last == NULL) {
-    queue_p->front = node_p;
-    queue_p->last = queue_p->front;
+  if (q->last == NULL) {
+    *q->head = node;
+    q->last = q->head;
     
   }
   else {
-    queue_p->last->next = node_p;
-    queue_p->last = node_p;
+    node_p tempnode = *q->last;
+    tempnode->next = node;
+    
+    *q->last = tempnode;
+    free (tempnode);
+    
   }
-  queue_p->size++;
+  q->size++;
 
 }
-node_p q_dequeue(queue queue_p)
+
+node_p q_dequeue(queue_p q)
 {
-  node_p front_temp= queue_p->front;
+  node_p front_temp= *q->head;
   if (front_temp == NULL) {
-    
+    return NULL;
   }
   else {
     if (front_temp->next != NULL) {
-      front_temp = front_temp->next;
+      *q->head = front_temp->next;  
+      return front_temp;
       
-    free(queue_p->front)
+      }
+  }
+    free(front_temp);
 
-
+  
 }
-
-void destroy(queue queue_p) {
+//fix this shit
+void destroy(queue_p q)
+ {
   node_p tempnode;
   node_p tempnode2;
-  while(!q_is_empty) {
-    tempnode = queue_p->front;
-    if(tempnode->next != NULL) {
-      tempnode2 = tempnode->NULL;  
+  //while(!q_is_empty(q)) {
+   // tempnode = *q->head;
+   // if(tempnode->next != NULL) {
+    //  tempnode2 = tempnode->next;  
 
-    }
-
+   // }
+//
 //  for(tempnode = queue_p->front; tempnode!=null;tempnode=tempnode2) {
  //     queue_p->front = queue
       
     
-  }
-  queue_p->front = queue_p->last = NULL;
+ // }
+  //q->head = q->last = NULL;
   
-  free queue_p;
+  free (q);
 }
     
 
