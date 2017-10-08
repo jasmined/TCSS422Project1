@@ -9,24 +9,25 @@ int main(void) {
 	
 	f = fopen("pcb_out.txt", "w");
 	
-	PCB_p pcb_array[15];
+	PCB_p pcb_array[10];
 
 	PCB_p pcb = construct();
 	pcb->priority = rand() % 16;
 	setPID(pcb);
-	toString(f, pcb);
-	toString_context(f, pcb);
+	toString(pcb);
+	toString_context(pcb);
+	toFile(f, pcb);
 	
 	
-	for (int n = 1; n < 15; n++) {
+	for (int n = 1; n < 10; n++) {
 		PCB_p pcb = construct();
 		pcb->pid = n;
 		pcb->priority = rand() % 16;
 		pcb->state = new;
 		pcb_array[n] = pcb;
-		toString(f, pcb_array[n]);
-		toString_context(f, pcb_array[n]);
-		// toFile(f, pcb);
+		toString(pcb_array[n]);
+		toString_context(pcb_array[n]);
+		toFile(f, pcb);
 	}
 
 	

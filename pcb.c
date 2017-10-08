@@ -40,19 +40,24 @@ void setPID(PCB_p pcb) {
 	pcb->pid = pid + 1;
 }
 
-char toString(FILE *f, PCB_p pcb) {
+char toString(PCB_p pcb) {
 	printf("PCB #%d-----------------------------------------------------------------\n", pcb->pid);
-	printf("PID: %02d, Priority: %02u, State: %s\n", pcb->pid, pcb->priority, getStateString(pcb->state));
-	
-	fprintf(f, "\n\nPCB #%d----------------------------------------------------------------------\r\n", pcb->pid);
-	fprintf(f, "\nPID: %02d, Priority: %02u, State: %s\r\n", pcb->pid, pcb->priority, getStateString(pcb->state));
+	printf("PID: 0x%X, Priority: 0x%02X, State: %s\n", pcb->pid, pcb->priority, getStateString(pcb->state));
 
 }
 
-char toString_context(FILE *f, PCB_p pcb) {
-	printf("PC: 0, IR: 0, PSR: 0, r0: 0, r1: 0, r2: 0, r3: 0, r4: 0, r5: 0, r6: 0, r7: 0\n\n");
-	fprintf(f, "PC: 0, IR: 0, PSR: 0, r0: 0, r1: 0, r2: 0, r3: 0, r4: 0, r5: 0, r6: 0, r7: 0\r\n");
+char toString_context(PCB_p pcb) {
+	printf("PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0\nn");
+	
+}
+
+void toFile(FILE *f, PCB_p pcb) {
+	fprintf(f, "\n\nPCB #%d----------------------------------------------------------------------\r\n", pcb->pid);
+	fprintf(f, "\nPID: 0x%X, Priority: 0x%02X, State: %s\r\n", pcb->pid, pcb->priority, getStateString(pcb->state));
+	
+	fprintf(f, "PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0\r\n");
 	fprintf(f, "\r\n");
+	
 }
 
 	
