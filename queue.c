@@ -6,15 +6,15 @@ queue_p init()//creates a queue and returns a pointer to it
 {
   //struct queue_p *retVal = malloc (sizeof (struct 
   queue_p q = (queue_p) malloc(sizeof (q));   
-  q->head = NULL;
-  q->last = NULL;
+  if (q != NULL)
+    q->head = q->last = NULL;
   return q;
 }
 
 node_p construct_node(PCB_p p)
 {
   node_p n = (node_p) malloc(sizeof (n));
-  n->pcb = &p;
+  n->pcb = p;
   n->next = NULL;
   return n;
   
@@ -27,32 +27,55 @@ int q_is_empty(queue_p q)//returns 1 if the queue is empty, 0 if not
 //fix this pls
 void q_enqueue(queue_p q, node_p node)//adds node to back of queue
 {
-  if (q->last == NULL) {
-    q->head = &node;
-    q->last = q->head;
+  
+  if (q->head == NULL) {
+    q->head = q->last = node;
     
   }
   else {
-    node_p tempnode = *q->last;
-    tempnode->next = node;
+    q->last->next = node;
+    q->last = node;
+    //node_p tempnode = *q->last;
+    //tempnode->next = *node;
     
-    *q->last = tempnode;
-    free (tempnode);
+    //*q->last = tempnode;
+    //free (tempnode);
     
   }
   q->size++;
 
 }
 
-PCB_p q_dequeue(queue_p q)//removes and returns front node of queue if there is a node 
+node_p q_dequeue(queue_p q)//removes and returns front node of queue if there is a node 
 { 
 
-  if (q_is_empty(q)) {
+  //printf("500\n");
+  node_p retval;
+  retval= *q->head;
+  /*if(q->head == q->last)
+    q->head = q->last = NULL;
+  else
+    q->head = node->next;*/
+//printf("600\n");
+  
+
+  
+  q->size--;
+  return retval;
+  
+
+
+/* printf("fails to start front_temp");
+  if (q_is_empty(q)) 
     return NULL;
-  } else {
+   
   node_p front_temp= *q->head;
-  PCB_p retval = front_temp->pcb;
-  /*if (front_temp == NULL) {
+  printf("fails creating front_temp");
+  *q->head = front_temp->next;
+  printf("fails resetting front");
+  PCB_p *retval = front_temp->pcb;
+  printf("fails creating return value");
+  if (front_temp == NULL) {
     return NULL;
   }
   else {
@@ -62,10 +85,10 @@ PCB_p q_dequeue(queue_p q)//removes and returns front node of queue if there is 
       
       }
   }*/
-    q->size--;
-    return retval;
+    
+    //return front_temp;
  
-  }
+  
 }
 void destroy(queue_p q)//destroys queue object
  {
@@ -75,8 +98,10 @@ void destroy(queue_p q)//destroys queue object
     tempnode = *q->head;
     if(tempnode->next != NULL) {
       tempnode2 = tempnode->next;  
-
+      *q->head = tempnode2;
+      //free (tempnode);
     }
+    
 //
 //  for(tempnode = queue_p->front; tempnode!=null;tempnode=tempnode2) {
  //     queue_p->front = queue
@@ -84,7 +109,10 @@ void destroy(queue_p q)//destroys queue object
     
   }
   //q->head = q->last = NULL;
-  
+  if (q->head != NULL) 
+    free(*q->head);
+  if (q->last != NULL) 
+    free(*q->last);
   free (q);
 }
 

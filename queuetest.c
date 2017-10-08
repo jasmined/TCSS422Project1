@@ -19,15 +19,23 @@ q_enqueue(q, node1);
 printf("4\n");
 b = q_is_empty(q);
 printf("%d\n", b);
-node_p deq_node = q_dequeue(q);
-PCB_p regottenpcb = &deq_node->pcb;
+
+node_p deq = q_dequeue(q);
+printf("4.125\n");
+b = q_is_empty(q);
+printf("%d\n", b);
+PCB_p pcb2= deq->pcb;
+if (deq == NULL) 
+  printf("NULL");
+// = &deq_node->pcb;
+printf("4.25\n");	
 FILE *f;
-	
-	f = fopen("qtest_out.txt", "w");
-	toString(f, regottenpcb);
+f = fopen("qtest_out.txt", "w");
+ //d toString(f, pcb2);
+printf("6\n");
 b = q_is_empty(q);
 printf("%d\n", b);
 printf("%d\n", q->size);
-destroy(q);
+//destroy(q);
 return 0;
 }
