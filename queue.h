@@ -20,3 +20,5 @@ int q_is_Empty(queue_p);
 void q_enqueue(queue_p, Node);
 q_dequeue(queue_p);
 
+#endif
+

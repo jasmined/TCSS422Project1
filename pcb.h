@@ -37,11 +37,10 @@ typedef struct pcb {
 typedef PCB_s * PCB_p;
 
 // Functions
-
 PCB_p construct();
 void deconstruct(PCB_p pcb);
-char toString(PCB_p pcb);
-char toString_context(PCB_p pcb);
+char toString(FILE *f, PCB_p pcb);
+char toString_context(FILE *f, PCB_p pcb);
 void setPID(PCB_p pcb);
 
 #endif
