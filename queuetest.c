@@ -18,15 +18,23 @@ for(int i = 0; i < b; i++) {
   p->state = new;
   q_enqueue(q, p);
   //printf("%d\n", b);
-  printf("Q: Count =%d: ",q->size);
+  fprintf(f, "Q: Count =%d: ",q->size);
   //printf("%d\n", b);
   writeQueue(q);
   //printf("%d\n", b);
-  printf(" : contents: ");
+  fprintf(f, " : contents: ");
   toString(p);
   }
 printf("%d\n", q->size);
-fprintf(f, "\nend_of_stream\n");	
+fprintf(f, "\nend_of_stream\n");
+while(!q_isEmpty(q)) {
+  q_dequeue(q);
+  fprintf(f, "Q: Count =%d: ",q->size);
+  //printf("%d\n", b);
+  writeQueue(q);
+  //printf("%d\n", b);
+  fprintf(f, " : contents: ");
+}	
 fclose(f);
 
  //d toString(f, pcb2);

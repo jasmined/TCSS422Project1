@@ -71,7 +71,7 @@ void writeQueue(queue_p queue) {
   int count;
   PCB_p tempPCB;
   printf("Count = %d: ", queue->size);
-  temp = &queue->head;
+  temp = queue->head;
   if (temp == NULL) 
     printf("NULL\n");
   //printf("Count = %d: ", queue->size);
