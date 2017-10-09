@@ -24,6 +24,7 @@ int q_isEmpty(queue_p queue);
 void q_enqueue(queue_p queue, PCB_p pcb);
 void q_dequeue(queue_p queue);
 void destroy(queue_p queue);
+void q_toString(queue_p queue, PCB_p pcb);
 
 
 #endif
