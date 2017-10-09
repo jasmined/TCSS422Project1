@@ -4,23 +4,7 @@
 #include "pcb.h"
 #include "queue2.h"
 
-/*int main() {
-	queue_p queue = create();
-	queue->size = 0;
 
-	PCB_p pcb = construct();
-	q_enqueue(queue, pcb);
-	
-	printf("Empty: %d\n", q_isEmpty(queue));	
-	printf("Size: %d\n", queue->size);
-	
-	q_dequeue(queue);
-	
-		printf("Empty: %d\n", q_isEmpty(queue));	
-	printf("Size: %d\n", queue->size);
-	
-}
-*/
 queue_p create() {
 	queue_p queue = (queue_p) malloc(sizeof(queue));	
 	queue->head = queue->end = NULL;
@@ -123,7 +107,7 @@ void writeQueue(queue_p queue, FILE *f) {
 		  if(temp == NULL) {
 			printf(">");
 			fprintf(f, ">");
-			//temp = temp->next;
+		
 			}
 		}
 		

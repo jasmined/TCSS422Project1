@@ -21,7 +21,7 @@ int main(void) {
 			p->state = new;
 			setPID(p);
 			p_enqueue(pqueue, p);
-			//p_toString(pqueue);
+		
 		}
 		
 		p_dequeue(pqueue);
