@@ -53,10 +53,10 @@ void p_dequeue(p_queue_p thisPQueue) {
 }
 
 
-void p_toString(p_queue_p pqueue) {
+/*void p_toString(p_queue_p pqueue) {
 	for (int n = 0; n < PRIORITIES; n++) {
 		printf("Q%d", n);
 		queue_p level_queue = pqueue->pqueue[n];
 		writeQueue(level_queue);
 	}
-}
+}*/

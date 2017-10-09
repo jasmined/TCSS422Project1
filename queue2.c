@@ -86,7 +86,7 @@ void q_toString(queue_p queue, PCB_p pcb) {
 	toString(pcb);
 }
 void destroy(queue_p queue) {
-  node_p temp, temp2;
+  node_p temp, temp2; 
   while (!q_isEmpty(queue)) {
     temp = temp2 = queue->head;
     if (temp->next != NULL) {

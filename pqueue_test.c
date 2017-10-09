@@ -18,7 +18,7 @@ int main(void) {
 			PCB_p p = construct();
 			p->priority = rand() % 16;	
 			p->state = new;
-			p->pid = i;
+			setPID(p);
 			p_enqueue(pqueue, p);
 			p_toString(pqueue, p);
 		}

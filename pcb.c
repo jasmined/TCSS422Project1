@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "pcb.h"
 
-unsigned int pid = -1;
+unsigned int gpid = 1;
 
 
 char* getStateString(enum state_type state) {
@@ -37,7 +37,9 @@ void deconstruct(PCB_p pcb) {
 }
 
 void setPID(PCB_p pcb) {
-	pcb->pid = pid + 1;
+	gpid++;
+	pcb->pid = gpid;
+	printf("%d\n", gpid);
 }
 
 void toString(PCB_p pcb) {
