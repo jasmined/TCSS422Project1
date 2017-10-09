@@ -1,3 +1,236 @@
-Q: Count =1:  : contents: Q: Count =2:  : contents: Q: Count =3:  : contents: Q: Count =4:  : contents: Q: Count =5:  : contents: Q: Count =6:  : contents: Q: Count =7:  : contents: Q: Count =8:  : contents: Q: Count =9:  : contents: Q: Count =10:  : contents: Q: Count =11:  : contents: Q: Count =12:  : contents: Q: Count =13:  : contents: 
+Count = 1: P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 2: P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 3: P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 4: P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 5: P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 6: P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 7: P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 8: P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 9: P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 10: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 11: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 12: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 13: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 14: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 15: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 16: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 17: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 18: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 19: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 20: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 21: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 22: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 23: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 24: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 25: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+Count = 26: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+
+
+PCB #0----------------------------------------------------------------------
+
+PID: 0x0, Priority: 0x11, State: new
+PC: 0x0, IR: 0x0 PSR: 0x0, r0: 0x0 r1: 0x0 r2: 0x0 r3: 0x0 r4: 0x0 r5: 0x0, r6: 0x0, r7: 0x0
+
+
 end_of_stream
-Q: Count =12:  : contents: Q: Count =11:  : contents: Q: Count =10:  : contents: Q: Count =9:  : contents: Q: Count =8:  : contents: Q: Count =7:  : contents: Q: Count =6:  : contents: Q: Count =5:  : contents: Q: Count =4:  : contents: Q: Count =3:  : contents: Q: Count =2:  : contents: Q: Count =1:  : contents: Q: Count =0:  : contents: 
+Q: Count =25: Count = 25: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =24: Count = 24: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =23: Count = 23: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =22: Count = 22: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =21: Count = 21: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =20: Count = 20: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =19: Count = 19: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =18: Count = 18: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =17: Count = 17: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =16: Count = 16: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =15: Count = 15: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =14: Count = 14: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =13: Count = 13: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =12: Count = 12: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =11: Count = 11: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =10: Count = 10: P0-P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =9: Count = 9: P0-P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =8: Count = 8: P0-P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =7: Count = 7: P0-P0-P0-P0-P0-P0-P0->*
+Q: Count =6: Count = 6: P0-P0-P0-P0-P0-P0->*
+Q: Count =5: Count = 5: P0-P0-P0-P0-P0->*
+Q: Count =4: Count = 4: P0-P0-P0-P0->*
+Q: Count =3: Count = 3: P0-P0-P0->*
+Q: Count =2: Count = 2: P0-P0->*
+Q: Count =1: Count = 1: P0->*
+Q: Count =0: Count = 0: *

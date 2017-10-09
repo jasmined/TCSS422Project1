@@ -26,6 +26,6 @@ void q_dequeue(queue_p queue);
 void destroy(queue_p queue);
 void q_toString(queue_p queue, PCB_p pcb);
 
-void writeQueue(queue_p queue); 
+void writeQueue(queue_p queue, FILE *f); 
 #endif
 

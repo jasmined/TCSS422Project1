@@ -103,27 +103,47 @@ void destroy(queue_p queue) {
     free(queue);
 }
 
-void writeQueue(queue_p queue) {
+void writeQueue(queue_p queue, FILE *f) {
   node_p temp; 
   int count;
   PCB_p tempPCB;
   printf("Count = %d: ", queue->size);
+  fprintf(f, "Count = %d: ", queue->size);
   temp = queue->head;
   if (temp == NULL) 
     printf("NULL\n");
+    //fprintf(f, "NULL\n");
   //printf("Count = %d: ", queue->size);
+/*  while(temp->next != NULL) {
+    
+    tempPCB = temp->pcb;
+    printf("P%x-", tempPCB->pid);
+    fprintf(f, "P%x-", tempPCB->pid);
+    temp = temp->next;
+      }
+    if(temp == NULL) {
+      printf(">");
+      fprintf(f, ">");
+      
+    }*/
+
+
   if (queue->size >= 1) {
     for(count = 0; count < queue->size; count++) {
       tempPCB = temp->pcb;
       printf("P%x-", tempPCB->pid);
-      if(temp->next != NULL) {
+      fprintf(f, "P%x-", tempPCB->pid);
+      temp = temp->next;
+      if(temp == NULL) {
         printf(">");
-        temp = temp->next;
+        fprintf(f, ">");
+        //temp = temp->next;
         }
     }
     
 
   }
   printf("*\n");
+  fprintf(f, "*\n");
 }
 
