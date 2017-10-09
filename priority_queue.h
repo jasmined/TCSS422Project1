@@ -5,7 +5,7 @@
 #include "queue2.h"
 
 typedef struct p_queue {
-	queue_p pqueue[16];
+	queue_p *pqueue[16];
 	
 } p_queue_s;
 
