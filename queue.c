@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include "queue.h"
 #include "pcb.h"
 
@@ -115,5 +116,9 @@ void destroy(queue_p q)//destroys queue object
     free(*q->last);
   free (q);
 }
+String toString(queue_p) {
+  Nod
 
+
+}
 

@@ -1,6 +1,6 @@
 #ifndef QUEUE_H
 #define QUEUE_H
-
+#include <string.h>
 #include "pcb.h"
 typedef struct node {
 	PCB_p pcb;
@@ -22,5 +22,6 @@ int q_is_empty(queue_p);
 void q_enqueue(queue_p, node_p);
 node_p q_dequeue(queue_p);
 void destroy(queue_p);
+String toString(queue_p);
 #endif
 
