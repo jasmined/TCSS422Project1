@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 #include "pcb.h"
 #include "queue2.h"
 
-int main() {
+/*int main() {
 	queue_p queue = create();
 	queue->size = 0;
 
@@ -20,11 +20,11 @@ int main() {
 	printf("Size: %d\n", queue->size);
 	
 }
-
+*/
 queue_p create() {
 	queue_p queue = (queue_p) malloc(sizeof(queue));	
 	queue->head = queue->end = NULL;
-	
+	queue->size = 0;
 	return queue;	
 }
 
@@ -64,4 +64,40 @@ void q_dequeue(queue_p queue) {
 	}
 	
 	queue->size--;
+}
+void q_toString(queue_p queue, PCB_p pcb) {
+	printf("Q: Count=%i: ", queue->size);
+	
+	for (int i = 0; i < queue->size; i++) {
+		printf("P%i-", i+1);
+		if (i == queue->size - 1) {
+			printf("*");
+		} else {
+			printf(">");
+		}
+	}
+	
+	printf(" : contents: \n");
+	
+	toString(pcb);
+}
+void writeQueue(queue_p queue) {
+  int count;
+  PCB_p tempPCB;
+  printf("Count = %d: ", queue->size);
+  node_p temp = queue->head;
+  printf("Count = %d: ", queue->size);
+  if (queue->size >= 1) {
+    for(count = 0; count < queue->size; count++) {
+      tempPCB = *temp->pcb;
+      printf("P%d-", tempPCB->pid);
+      if(temp->next != NULL) {
+        printf(">");
+        temp = temp->next;
+        }
+    }
+    
+
+  }
+  printf("*\n");
 }

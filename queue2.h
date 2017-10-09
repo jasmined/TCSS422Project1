@@ -13,7 +13,7 @@ typedef node_s * node_p;
 typedef struct queue {
 	node_p head;
 	node_p end;
-	int size, counter;
+	int size;
 } queue_s;
 
 typedef queue_s * queue_p;
@@ -25,6 +25,6 @@ void q_enqueue(queue_p queue, PCB_p pcb);
 void q_dequeue(queue_p queue);
 void destroy(queue_p queue);
 
-
+void writeQueue(queue_p queue); 
 #endif
 
