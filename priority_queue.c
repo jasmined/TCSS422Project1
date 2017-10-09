@@ -7,16 +7,16 @@
 
 #define PRIORITIES 15
 
-int main() {
+/*int main() {
 	
-	p_queue_p pqueue = construct_pqueue();
+	p_queue_p pq = construct_pqueue();
 	
 	PCB_p pcb = construct();
 	pcb->priority = 4;
 	p_enqueue(pqueue, pcb);
 	
 }
-
+*/
 // done
 p_queue_p construct_pqueue() {
 	
@@ -47,11 +47,16 @@ void p_dequeue(p_queue_p thisPQueue) {
 		// dequeue in queue class.
 		if(q_isEmpty(thisPQueue->pqueue[n]) == 0) {
 			q_dequeue(thisPQueue->pqueue[n]);
+                        break;
 		}
 	}
 }
 
 
 void p_toString(p_queue_p pqueue) {
-	
+	for (int n = 0; n < PRIORITIES; n++) {
+		printf("Q%d", n);
+		queue_p level_queue = pqueue->pqueue[n];
+		writeQueue(level_queue);
+	}
 }
