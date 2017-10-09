@@ -38,7 +38,7 @@ int q_isEmpty(queue_p queue) {
 
 void q_enqueue(queue_p queue, PCB_p pcb) {
 	node_p node = (node_p) malloc(sizeof(node));
-	node->pcb = &pcb;
+	node->pcb = pcb;
 	node->next = NULL;
 
 	
@@ -67,14 +67,17 @@ void q_dequeue(queue_p queue) {
 }
 
 void writeQueue(queue_p queue) {
+  node_p temp; 
   int count;
   PCB_p tempPCB;
   printf("Count = %d: ", queue->size);
-  node_p temp = queue->head;
-  printf("Count = %d: ", queue->size);
+  temp = &queue->head;
+  if (temp == NULL) 
+    printf("NULL\n");
+  //printf("Count = %d: ", queue->size);
   if (queue->size >= 1) {
     for(count = 0; count < queue->size; count++) {
-      tempPCB = *temp->pcb;
+      tempPCB = temp->pcb;
       printf("P%d-", tempPCB->pid);
       if(temp->next != NULL) {
         printf(">");

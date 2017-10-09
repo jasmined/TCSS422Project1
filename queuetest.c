@@ -13,13 +13,13 @@ printf("%d\n", b);
 //printf("%d\n", q->size);
 for(int i = 0; i < b; i++) {
   p = construct();
-  printf("%d\n", b);
+  //printf("%d\n", b);
   p->priority = rand() % 16;
   p->state = new;
   q_enqueue(q, p);
-  printf("%d\n", b);
+  //printf("%d\n", b);
   printf("Q: Count =%d: ",q->size);
-  printf("%d\n", b);
+  //printf("%d\n", b);
   writeQueue(q);
   //printf("%d\n", b);
   printf(" : contents: ");

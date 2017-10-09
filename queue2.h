@@ -4,7 +4,7 @@
 #include "pcb.h"
 
 typedef struct node {
-	PCB_p *pcb;
+	PCB_p pcb;
 	struct node *next;
 } node_s;
 
