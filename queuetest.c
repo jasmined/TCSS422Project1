@@ -16,10 +16,11 @@ int c;
 //printf("%d\n", q->size);
 for(int i = 0; i < b; i++) {
   PCB_p p = construct();
+  p->priority = rand() % 16;
   //printf("%d\n", b);
  // c = rand() % 16;
   setPID(p);
-  p->priority = rand() % 16;
+  
   p->state = new;
   q_enqueue(q, p);
   
