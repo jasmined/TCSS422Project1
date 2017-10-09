@@ -33,6 +33,8 @@ int main(void) {
 		toString_context(pcb_array[n]);
 		toFile(f, pcb);
 	}
+	
+	fclose(f);
 
 
 	deconstruct(pcb);

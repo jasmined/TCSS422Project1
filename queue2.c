@@ -70,7 +70,6 @@ void q_dequeue(queue_p queue) {
 void q_toString(queue_p queue, PCB_p pcb) {
 	printf(": Count=%i: ", queue->size);
 	
-	// fix process number
 	
 	for (int i = 0; i < queue->size; i++) {
 		printf("P%i-", i+1);
@@ -85,65 +84,52 @@ void q_toString(queue_p queue, PCB_p pcb) {
 	
 	toString(pcb);
 }
+
 void destroy(queue_p queue) {
-  node_p temp, temp2; 
-  while (!q_isEmpty(queue)) {
-    temp = temp2 = queue->head;
-    if (temp->next != NULL) {
-      temp2 = temp->next;
-      q_dequeue(queue);	
-      free(temp->pcb);	
-      free(temp);
-	
-      temp = temp2;	
-    }
-  }
-  //  free(temp);
-   // free(temp2);
-    free(queue);
+	node_p temp, temp2; 
+	while (!q_isEmpty(queue)) {
+		temp = temp2 = queue->head;
+		if (temp->next != NULL) {
+			temp2 = temp->next;
+			q_dequeue(queue);	
+			free(temp->pcb);	
+			free(temp);
+		
+			temp = temp2;	
+		}
+	}
+
+	free(queue);
 }
 
 void writeQueue(queue_p queue, FILE *f) {
-  node_p temp; 
-  int count;
-  PCB_p tempPCB;
-  printf("Count = %d: ", queue->size);
-  fprintf(f, "Count = %d: ", queue->size);
-  temp = queue->head;
-  if (temp == NULL) 
-    printf("NULL\n");
-    //fprintf(f, "NULL\n");
-  //printf("Count = %d: ", queue->size);
-/*  while(temp->next != NULL) {
-    
-    tempPCB = temp->pcb;
-    printf("P%x-", tempPCB->pid);
-    fprintf(f, "P%x-", tempPCB->pid);
-    temp = temp->next;
-      }
-    if(temp == NULL) {
-      printf(">");
-      fprintf(f, ">");
-      
-    }*/
+	node_p temp; 
+	int count;
+	PCB_p tempPCB;
+	printf("Count = %d: ", queue->size);
+	fprintf(f, "Count = %d: ", queue->size);
+	temp = queue->head;
+	if (temp == NULL) 
+		printf("NULL\n");
 
 
-  if (queue->size >= 1) {
-    for(count = 0; count < queue->size; count++) {
-      tempPCB = temp->pcb;
-      printf("P%x-", tempPCB->pid);
-      fprintf(f, "P%x-", tempPCB->pid);
-      temp = temp->next;
-      if(temp == NULL) {
-        printf(">");
-        fprintf(f, ">");
-        //temp = temp->next;
-        }
-    }
-    
 
-  }
-  printf("*\n");
-  fprintf(f, "*\n");
+	  if (queue->size >= 1) {
+		for(count = 0; count < queue->size; count++) {
+		  tempPCB = temp->pcb;
+		  printf("P%x-", tempPCB->pid);
+		  fprintf(f, "P%x-", tempPCB->pid);
+		  temp = temp->next;
+		  if(temp == NULL) {
+			printf(">");
+			fprintf(f, ">");
+			//temp = temp->next;
+			}
+		}
+		
+
+	  }
+	  printf("*\n");
+	  fprintf(f, "*\n");
 }
 

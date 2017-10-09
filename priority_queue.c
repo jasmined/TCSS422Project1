@@ -7,17 +7,7 @@
 
 #define PRIORITIES 15
 
-/*int main() {
-	
-	p_queue_p pq = construct_pqueue();
-	
-	PCB_p pcb = construct();
-	pcb->priority = 4;
-	p_enqueue(pqueue, pcb);
-	
-}
-*/
-// done
+
 p_queue_p construct_pqueue() {
 	
 	p_queue_p thisPQueue = (p_queue_p) malloc(sizeof(p_queue_p));
@@ -33,8 +23,6 @@ p_queue_p construct_pqueue() {
 
 void p_enqueue(p_queue_p thisPQueue, PCB_p pcb) {
 	
-	// reminder: without assigning priority number,
-	// this gives a seg fault.
 	int pri_num = pcb->priority;
 	q_enqueue(thisPQueue->pqueue[pri_num], pcb);
 	
