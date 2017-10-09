@@ -10,15 +10,19 @@ int main(void) {
 	f = fopen("pcb_out.txt", "w");
 	
 	PCB_p pcb_array[10];
+	
+	// Create a new PCB with no manipulations
+	// and print out its contents.
 
 	PCB_p pcb = construct();
-	pcb->priority = rand() % 16;
-	setPID(pcb);
+	pcb_array[0] = pcb;
 	toString(pcb);
 	toString_context(pcb);
 	toFile(f, pcb);
 	
 	
+	// Generates a number of PCBs with randomized 
+	// priority and stores to a file.
 	for (int n = 1; n < 10; n++) {
 		PCB_p pcb = construct();
 		pcb->pid = n;
@@ -30,7 +34,6 @@ int main(void) {
 		toFile(f, pcb);
 	}
 
-	
+
 	deconstruct(pcb);
-	
 }
