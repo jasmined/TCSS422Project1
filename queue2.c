@@ -65,22 +65,7 @@ void q_dequeue(queue_p queue) {
 	
 	queue->size--;
 }
-void q_toString(queue_p queue, PCB_p pcb) {
-	printf("Q: Count=%i: ", queue->size);
-	
-	for (int i = 0; i < queue->size; i++) {
-		printf("P%i-", i+1);
-		if (i == queue->size - 1) {
-			printf("*");
-		} else {
-			printf(">");
-		}
-	}
-	
-	printf(" : contents: \n");
-	
-	toString(pcb);
-}
+
 void writeQueue(queue_p queue) {
   int count;
   PCB_p tempPCB;
