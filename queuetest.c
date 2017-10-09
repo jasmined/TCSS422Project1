@@ -7,7 +7,7 @@ int main()
 {
 FILE *f;
 f = fopen("qtest_out.txt", "w");
-PCB_p p;
+
 queue_p q = create();
 srand(time(NULL));
 int b = rand() % 20 + 10;
@@ -15,10 +15,11 @@ int c;
 //printf("%d\n", b);
 //printf("%d\n", q->size);
 for(int i = 0; i < b; i++) {
-  p = construct();
+  PCB_p p = construct();
   //printf("%d\n", b);
-  c = rand() % 16;
-  p->priority = c;
+ // c = rand() % 16;
+  setPID(p);
+  p->priority = rand() % 16;
   p->state = new;
   q_enqueue(q, p);
   
@@ -32,7 +33,7 @@ for(int i = 0; i < b; i++) {
   toString(p);
   toFile(f, p);
   }
-printf("%d\n", q->size);
+//printf("%d\n", q->size);
 fprintf(f, "\nend_of_stream\n");
 while(!q_isEmpty(q)) {
   q_dequeue(q);
