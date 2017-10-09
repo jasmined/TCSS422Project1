@@ -92,6 +92,8 @@ void q_dequeue(queue_p queue) {
 void q_toString(queue_p queue, PCB_p pcb) {
 	printf("Q: Count=%i: ", queue->size);
 	
+	// fix process number
+	
 	for (int i = 0; i < queue->size; i++) {
 		printf("P%i-", i+1);
 		if (i == queue->size - 1) {
